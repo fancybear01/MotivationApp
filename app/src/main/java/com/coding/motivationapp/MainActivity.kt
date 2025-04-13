@@ -54,7 +54,14 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         createNotificationChannel()
-        if (!isAlarmSet()) AlarmReceiver.setNextAlarm(this)
+        if (!isAlarmSet()) {
+            AlarmReceiver.setNextAlarm(this)
+//            Toast.makeText(
+//                this,
+//                "Точные уведомления включены",
+//                Toast.LENGTH_LONG
+//            ).show()
+        }
         setContent {
             MotivationAppTheme {
                 MotivationScreen(context = this)

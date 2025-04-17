@@ -38,7 +38,19 @@ class AlarmReceiver : BroadcastReceiver() {
     }
 
     private fun showNotification(context: Context) {
+        val quotes = context.resources.getStringArray(R.array.motivational_quotes)
+        val randomQuote = quotes.random()
 
+        val notificationManager = context.getSystemService<NotificationManager>()
+
+        val notification = NotificationCompat.Builder(context, "motivation_channel")
+            .setContentTitle("Мотивация дня")
+            .setContentText(randomQuote)
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setAutoCancel(true)
+            .build()
+
+        notificationManager?.notify(Random.nextInt(), notification)
     }
 
     companion object {

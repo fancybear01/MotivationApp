@@ -17,14 +17,14 @@ val provider = GoogleFont.Provider(
 
 val bodyFontFamily = FontFamily(
     Font(
-        googleFont = GoogleFont("Merriweather"),
+        googleFont = GoogleFont("Orelega One"),
         fontProvider = provider,
     )
 )
 
 val displayFontFamily = FontFamily(
     Font(
-        googleFont = GoogleFont("Playfair Display"),
+        googleFont = GoogleFont("Orelega One"),
         fontProvider = provider,
     )
 )

@@ -39,11 +39,11 @@ fun AnimatedCentralGradientBackground() {
 
     // Состояние частиц
     val particles = remember {
-        List(150) {
+        List(300) {
             ParticleState(
                 angle = Random.nextFloat() * 360f,
                 speed = Random.nextFloat() * 3f + 1f,
-                size = Random.nextFloat() * 4f + 2f,
+                size = Random.nextFloat() * 2f + 2f,
                 maxDistance = Random.nextFloat() * 1000f + 500f
             )
         }
